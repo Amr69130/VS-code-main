@@ -134,11 +134,11 @@ a {
     align-items: flex-end;
     gap: 20px;
     position: absolute;
-    right: -20px; /* Place les logos en dehors de la carte */
+    right: -30px; /* Place les logos en dehors de la carte */
     top: 3%;    
     z-index: 1; /* Les logos sont derrière la carte par défaut */
     
-    transition-duration: 1.5s;
+    transition-duration: 500ms;
 }
 
 
@@ -152,8 +152,8 @@ a {
 }
 
 .tech-img {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     transition: transform 0.3s, opacity 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
@@ -169,9 +169,7 @@ a {
     opacity: 1;
 }
 
-.tech-img:hover {
-     /* Agrandit le logo au survol */
-}
+
 
 .txt {
     color: whitesmoke;
