@@ -134,35 +134,40 @@ a {
     align-items: flex-end;
     gap: 20px;
     position: absolute;
-    right: -40px; /* Place les logos en dehors de la carte */
-    top: 3%;
-    
+    right: -20px; /* Place les logos en dehors de la carte */
+    top: 3%;    
     z-index: 1; /* Les logos sont derrière la carte par défaut */
-
+    opacity: 50%;
 }
 
-
+.logos_network:hover {
+    opacity: 1;
+}
 
 .tech {
     text-align: center;
     position: relative;
+    overflow: hidden; /* Masquer la moitié de l'image */
 }
 
 .tech-img {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     transition: transform 0.3s, opacity 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
+    /* Effet de masque */
+    mask-image: linear-gradient(to left, black 50%, transparent 50%);
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
 }
 
-.card:hover .tech-img {
-    opacity: 1; /* Affiche le logo au survol */
-    transform: translateX(0); /* Fait entrer le logo dans la carte */
+.tech:hover .tech-img {
+    mask-image: none; /* Affiche complètement l'image au survol */
 }
 
 .tech-img:hover {
-    transform: scale(1.2); /* Agrandit le logo au survol */
+     /* Agrandit le logo au survol */
 }
 
 .txt {
@@ -209,7 +214,7 @@ a {
     }
 }
 
-.links{
+.links {
     position: relative;
     z-index: 1;
 }
