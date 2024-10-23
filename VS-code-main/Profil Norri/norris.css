@@ -80,7 +80,7 @@ body {
     border-radius: 50%;
     box-shadow: 0 5px 15px rgba(33, 33, 33, 0.3);
     transition: transform 0.3s;
-    opacity: 50%;
+    
 }
 
 .avatar img:hover {
@@ -137,12 +137,13 @@ a {
     right: -20px; /* Place les logos en dehors de la carte */
     top: 3%;    
     z-index: 1; /* Les logos sont derrière la carte par défaut */
-    opacity: 50%;
+    
+    transition-duration: 1.5s;
 }
 
-.logos_network:hover {
-    opacity: 1;
-}
+
+
+
 
 .tech {
     text-align: center;
@@ -156,6 +157,7 @@ a {
     transition: transform 0.3s, opacity 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
+    opacity: 50%;
     /* Effet de masque */
     mask-image: linear-gradient(to left, black 50%, transparent 50%);
     mask-size: 100% 100%;
@@ -164,6 +166,7 @@ a {
 
 .tech:hover .tech-img {
     mask-image: none; /* Affiche complètement l'image au survol */
+    opacity: 1;
 }
 
 .tech-img:hover {
